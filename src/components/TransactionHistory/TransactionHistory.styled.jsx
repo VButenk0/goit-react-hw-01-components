@@ -27,11 +27,3 @@ export const TableBody = styled.tbody`
     background-color: #ecf1f4;
   }
 `;
-
-export const EvenRow = styled.tr`
-  background-color: #ecf1f4;
-`;
-
-export const OddRow = styled.tr`
-  background-color: white;
-`;
