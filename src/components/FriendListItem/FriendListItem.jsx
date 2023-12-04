@@ -1,8 +1,7 @@
 import React from 'react';
 import {
   FriendCard,
-  OnlineStatus,
-  OfflineStatus,
+  Status,
   FriendAvatar,
   FriendName,
 } from './FriendListItem.styled';
@@ -10,7 +9,8 @@ import {
 export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <FriendCard>
-      {isOnline ? <OnlineStatus /> : <OfflineStatus />}
+      {/* {isOnline ? <OnlineStatus /> : <OfflineStatus />} */}
+      <Status $isOnline={isOnline} />
       <FriendAvatar src={avatar} alt="User avatar" width="48" />
       <FriendName>{name}</FriendName>
     </FriendCard>

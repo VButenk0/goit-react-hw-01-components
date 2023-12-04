@@ -11,19 +11,26 @@ export const FriendCard = styled.li`
   padding: 10px;
 `;
 
-export const OnlineStatus = styled.span`
+export const Status = styled.span`
   width: 10px;
   height: 10px;
-  background-color: green;
   border-radius: 50%;
+  background-color: ${props => (props.$isOnline ? 'green' : 'red')};
 `;
 
-export const OfflineStatus = styled.span`
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  border-radius: 50%;
-`;
+// export const OnlineStatus = styled.span`
+//   width: 10px;
+//   height: 10px;
+//   background-color: green;
+//   border-radius: 50%;
+// `;
+
+// export const OfflineStatus = styled.span`
+//   width: 10px;
+//   height: 10px;
+//   background-color: red;
+//   border-radius: 50%;
+// `;
 
 export const FriendAvatar = styled.img`
   width: 48px;

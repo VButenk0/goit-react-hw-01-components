@@ -7,12 +7,8 @@ export const Statistics = ({ title, stats }) => {
     <StatSection>
       {title ? <StatTitle>{title}</StatTitle> : null}
       <StatList>
-        {stats.map(item => (
-          <StatisticsItem
-            key={item.id}
-            label={item.label}
-            percentage={item.percentage}
-          />
+        {stats.map(({ id, label, percentage }) => (
+          <StatisticsItem key={id} label={label} percentage={percentage} />
         ))}
       </StatList>
     </StatSection>

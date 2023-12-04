@@ -1,5 +1,5 @@
 import React from 'react';
-import { THRow } from 'components/THBody/THRow';
+import { THRow } from 'components/THRow/THRow';
 import {
   Table,
   TableHead,
@@ -19,13 +19,8 @@ export const TransactionHistory = ({ items }) => {
       </TableHead>
 
       <TableBody>
-        {items.map(item => (
-          <THRow
-            key={item.id}
-            type={item.type}
-            amount={item.amount}
-            currency={item.currency}
-          />
+        {items.map(({ id, type, amount, currency }) => (
+          <THRow key={id} type={type} amount={amount} currency={currency} />
         ))}
       </TableBody>
     </Table>
